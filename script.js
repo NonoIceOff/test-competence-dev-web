@@ -5,14 +5,14 @@ $(document).ready(function () {
   let url = urlInput.val();
   let intervalSeconds = intervalInput.val() * 1000;
 
-  $("#startBtn").click(function () {
-    clearInterval(interval); // Clear any existing interval
-    url = urlInput.val(); // Update URL from input
-    intervalSeconds = intervalInput.val() * 1000; // Update interval from input
+  $("#startButton").click(function () {
+    clearInterval(interval);
+    url = urlInput.val();
+    intervalSeconds = intervalInput.val() * 1000;
     interval = setInterval(testResponseTime, intervalSeconds);
   });
 
-  $("#stopBtn").click(function () {
+  $("#stopButton").click(function () {
     clearInterval(interval);
   });
 
